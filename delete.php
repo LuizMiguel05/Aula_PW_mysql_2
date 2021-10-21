@@ -26,13 +26,17 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     <head>
         <meta charset="UTF-8">
         <title>Remover Gênero</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
     <body>
-        <h1>Remover Gênero</h1>
-        <p>Tem certeza que deseja remover o gênero "<?= $genero['nome'] ?>" ?</p>
-        <form action="delete.php" method="post">
-            <input type="hidden" name="id" value="<?= $genero['id'] ?>" />
-            <button type="submit">Excluir</button>
-        </form>
+        <main class="container">
+            <h1>Remover Gênero</h1>
+            <p>Tem certeza que deseja remover o gênero <?= $genero['nome'] ?> ?</p>
+            
+            <form action="delete.php" method="post">
+                <input type="hidden" name="id" value="<?= $genero['id'] ?>" />
+                <a class="btn btn-secondary" href="index.php">Voltar</a>
+                <button class="btn btn-danger" type="submit">Excluir</button>
+            </form>
     </body>
 </html>
