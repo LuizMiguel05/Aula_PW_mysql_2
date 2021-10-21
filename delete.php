@@ -27,6 +27,25 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
         <meta charset="UTF-8">
         <title>Remover Gênero</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <!-- Estilo para usar rodapé na pagina, não tem haver com o código principal do professor -->
+        <style>
+           
+           footer{
+               
+                Font-family: cursive;
+                position: absolute;
+                bottom:0px;
+                Width: 100%;
+                text-align: center; 
+                background-color:slategrey;
+        
+
+           }
+
+        </style>
+
+        
     </head>
     <body>
         <main class="container">
@@ -37,6 +56,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <input type="hidden" name="id" value="<?= $genero['id'] ?>" />
                 <a class="btn btn-secondary" href="index.php">Voltar</a>
                 <button class="btn btn-danger" type="submit">Excluir</button>
+         
             </form>
+        </main>  
+        
+        <footer> <!-- A tag footer para usar rodapé na pagina, não tem haver com o código principal do professor -->
+            <h4>Desenvolvido por Luiz Miguel Souza Alves (2021)</h4>
+        </footer>
+
     </body>
 </html>
