@@ -10,36 +10,12 @@ $comando->execute();
 
 $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
 
+$_title = 'Gêneros';
+
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Biblioteca</title>
-       
-        <!-- Estilo para usar rodapé na pagina, não tem haver com o código principal do professor -->
-        
-        <style>
-           
-           footer{
-               
-                Font-family: cursive;
-                position: absolute;
-                bottom:0px;
-                Width: 100%;
-                text-align: center; 
-                background-color:slategrey;
-        
+<?php include('./includes/header.php'); ?>
 
-           }
-
-        </style>
-       
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    </head>
-    <body>  
-        <main class="container">
             <a class="btn btn-primary" href="insert.php">Novo Gênero</a>
             <table class="table">
                 <tr>
@@ -58,11 +34,5 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
                         </tr>
                 <?php endforeach ?>
             </table>
-        </main>
         
-        <footer> <!-- A tag footer para usar rodapé na pagina, não tem haver com o código principal do professor -->
-            <h4>Desenvolvido por Luiz Miguel Souza Alves (2021)</h4>
-        </footer>
-
-    </body>
-</html>
+<?php include('./includes/footer.php'); ?>
