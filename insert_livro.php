@@ -1,6 +1,6 @@
 <?php
 require_once './vendor/autoload.php';
-use ExemploPDOMySql\MySQLConnection; //PDO;
+use ExemploPDOMySQL\MySQLConnection; //PDO;
 
 $bd = new MySQLConnection();
 
@@ -9,6 +9,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     $comando->execute();
 
     $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+
+}else {
+    $comando = $bd->prepare('INSERT INTO livros(titulo, id_genero) VALUES(:titulo, :genero)');
+    $comando->execute([':titulo' => $_POST['titulo'], ':genero' => $_POST['genero']]);
+
+    header('Location:/list_livros.php');
 }
 
 ?>
