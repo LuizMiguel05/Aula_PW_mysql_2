@@ -27,7 +27,7 @@ $_title = 'Livros';
                         <td><?= $l['titulo'] ?></td>
                         <td>
                             <a class="btn btn-secondary" href="update_livro.php?id=<?= $l['id'] ?>">Editar</a>
-                            <a class="btn btn-danger" href="delete.php?id=<?= $l['id'] ?>">Excluir</a>
+                            <a class="btn btn-danger" href="delete_livro.php?id=<?= $l['id'] ?>">Excluir</a>
                         </td>
                         </tr>
                 <?php endforeach ?>
